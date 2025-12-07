@@ -1,0 +1,89 @@
+<section id="cotizar" class="section-container cotizar-section">
+  <h2 class="section-title">Solicita tu cotización</h2>
+  <p class="section-subtitle">
+    Cuéntanos qué necesitas y te enviaremos una propuesta personalizada para tus impresiones,
+    copias, arreglos y servicios escolares.
+  </p>
+
+  <div class="cotizar-layout">
+    <!-- Columna izquierda: información -->
+    <div class="cotizar-info">
+      <h3>¿Por qué cotizar con nosotros?</h3>
+      <ul class="cotizar-benefits">
+        <li>Precios especiales para estudiantes y docentes.</li>
+        <li>Entregas rápidas para tareas, proyectos y trabajos finales.</li>
+        <li>Atención por WhatsApp, correo o en el local.</li>
+        <li>Descuentos por volumen en copias e impresiones.</li>
+      </ul>
+
+      <div class="cotizar-contact-hint">
+        También puedes escribirnos directamente a:
+        <strong>WhatsApp 3246-7217</strong> o
+        <strong>Gatazhua3c@hotmail.es</strong>
+      </div>
+    </div>
+
+    <!-- Columna derecha: formulario -->
+    <div class="cotizar-form-card">
+      <form id="formulario-cotizar">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana Martínez" required>
+          </div>
+
+          <div class="form-field">
+            <label for="telefono">Teléfono / WhatsApp</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ej. 9876-5432" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" placeholder="Ej. ana@email.com" required>
+          </div>
+
+          <div class="form-field">
+            <label for="servicio">Servicio requerido</label>
+            <select id="servicio" name="servicio" required>
+              <option value="">Selecciona una opción</option>
+              <option value="fotocopias">Fotocopias blanco y negro</option>
+              <option value="impresiones">Impresiones a color</option>
+              <option value="arreglos">Arreglos personalizados</option>
+              <option value="secretariales">Servicios secretariales</option>
+              <option value="paquetes">Paquetes escolares / combos</option>
+              <option value="otros">Otro servicio</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="detalles">Detalles del trabajo</label>
+          <textarea id="detalles" name="detalles" rows="4"
+            placeholder="Ej. 50 copias tamaño carta, ambas caras, para mañana en la mañana." required></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="entrega">Modo de entrega preferido</label>
+            <select id="entrega" name="entrega">
+              <option value="">Selecciona una opción</option>
+              <option value="local">Recoger en el local</option>
+              <option value="digital">Entrega digital (correo / WhatsApp)</option>
+              <option value="ambos">Ambos</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="fecha">Fecha estimada de entrega</label>
+            <input type="date" id="fecha" name="fecha">
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary">
+          Enviar cotización
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

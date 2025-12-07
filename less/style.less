@@ -1,0 +1,1018 @@
+// 🎨 PALETA OFICIAL
+@azul: #1A73E8;        // barra, enlaces, botones primarios
+@grafito: #303033;     // títulos, footer
+@blanco: #FFFFFF;      // fondos principales, tarjetas
+@grisClaro: #F2F3F5;   // fondos alternos, bordes suaves
+@turquesa: #27C3B3;    // botones secundarios, etiquetas
+
+/* ============ RESET ============ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: Arial, sans-serif;
+  background-color: @grisClaro;   // fondo general suave
+  color: @grafito;
+}
+
+/* ============ HEADER / NAVBAR ============ */
+
+header {
+  background-color: @azul;
+  color: @blanco;
+  padding: 18px 0 14px;
+}
+
+.header-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+
+  img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 8px;
+  }
+
+  .logo {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 2px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  nav {
+    margin-top: 4px;
+
+    a {
+      display: inline-block;
+      margin: 0 5px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: bold;
+      color: @blanco;
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+
+      &.activo {
+        background-color: @blanco;
+        color: @azul;
+        border-color: @blanco;
+      }
+
+      &:hover {
+        background-color: @blanco;
+        color: @azul;
+      }
+    }
+  }
+}
+
+/* ============ SECCIONES GENERALES ============ */
+
+section {
+  padding: 32px 18px;        // padding general
+}
+
+.section-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 14px;
+  text-align: center;
+  background-color: @blanco;
+  border-radius: 14px;
+}
+
+.principal {
+  background-color: @grisClaro;
+}
+
+.alt-bg {
+  background-color: @grisClaro;
+}
+
+h2 {
+  font-size: 26px;
+  margin-bottom: 6px;
+  color: @grafito;
+}
+
+.subtexto {
+  font-size: 15px;
+  margin-bottom: 18px;
+  color: #555;
+}
+
+/* ============ HOME / INICIO (HERO) ============ */
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============ TARJETAS GENERALES ============ */
+
+.card,
+.box,
+.blog-box,
+.evento-card,
+.promo-item {
+  background-color: @blanco;
+  border-radius: 14px;
+  border: 1px solid @grisClaro;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.card img,
+.box img,
+.blog-box img,
+.evento-card img,
+.promo-item img {
+  width: 100%;
+  max-width: 240px;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 8px;
+}
+
+.card h3,
+.blog-box h3,
+.evento-card h3,
+.promo-item h3 {
+  font-size: 18px;
+  margin: 6px 0;
+}
+
+.card p,
+.blog-box p,
+.evento-card p,
+.promo-item p {
+  font-size: 14px;
+}
+
+/* Etiqueta tipo “promo / nuevo” */
+.tag {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: @turquesa;
+  color: @blanco;
+}
+
+/* Hover suave en tarjetas */
+.card:hover,
+.blog-box:hover,
+.evento-card:hover,
+.promo-item:hover {
+  transform: translateY(-3px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* ============ SERVICIOS (GRID) ============ */
+
+.servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  padding-top: 10px;
+}
+
+/* ============ GALERÍA ============ */
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+  padding-top: 10px;
+
+  .box {
+    padding: 0;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid @grisClaro;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+
+    img {
+      width: 100%;
+      max-width: none;
+      height: 100%;
+      border-radius: 0;
+      display: block;
+    }
+  }
+}
+
+/* ============ BLOG / PROMOS CONTENEDORES ============ */
+
+.blog-container,
+.promos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  padding-top: 10px;
+}
+
+/* ============ EVENTOS ============ */
+
+.eventos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 18px;
+}
+
+.evento-card {
+  padding: 0;
+  text-align: left;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 160px;
+    max-width: none;
+    border-radius: 14px 14px 0 0;
+    object-fit: cover;
+    margin: 0;
+  }
+
+  .evento-info {
+    padding: 12px 14px;
+
+    h3 {
+      font-size: 17px;
+      margin-bottom: 4px;
+      color: @grafito;
+    }
+
+    p {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .fecha {
+      font-size: 13px;
+      font-weight: bold;
+      color: @azul;
+    }
+  }
+}
+
+/* ============ BOTONES ============ */
+
+.btn-primary,
+button.btn-primary,
+form button[type="submit"] {
+  background-color: @azul;
+  color: @blanco;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: @turquesa;
+  color: @blanco;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+a.btn-primary,
+a.btn-secondary {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-primary + .btn-secondary {
+  margin-left: 6px;
+}
+
+/* ============ FORMULARIOS (CONTACTO / COTIZAR) ============ */
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: @blanco;
+  border-radius: 14px;
+  border: 1px solid @grisClaro;
+  padding: 18px;
+  text-align: left;
+}
+
+form label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  color: @grafito;
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 7px 9px;
+  border-radius: 8px;
+  border: 1px solid @grisClaro;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form button {
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* ============ FAQ ============ */
+
+.faq-list {
+  max-width: 800px;
+  margin: 18px auto 0;
+  text-align: left;
+}
+
+.faq-item {
+  margin-bottom: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid @grisClaro;
+  background-color: @blanco;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 10px 12px;
+  text-align: left;
+  font-size: 14px;
+  background-color: @blanco;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: @azul;
+}
+
+.faq-answer {
+  display: none;
+  padding: 10px 12px;
+  border-top: 1px solid @grisClaro;
+  font-size: 14px;
+  color: #555;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+/* ============ PROMOS: NOTAS / AVISOS ============ */
+
+.disclaimer {
+  max-width: 900px;
+  margin: 22px auto 0;
+  background-color: @grisClaro;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 13px;
+}
+
+/* ================================
+   PROMOCIONES
+   ================================ */
+
+.section-promos {
+  background: #f0f8ff; // azul muy claro de la paleta
+}
+
+/* 👉 CENTRAR título y subtítulo de esta sección */
+.section-promos .section-title,
+.section-promos .section-subtitle {
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.promo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.promo-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  border: 1px solid #d1dce5; // gris azulado de la paleta
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.promo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+.promo-img {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.promo-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.promo-body {
+  padding: 1.25rem 1.5rem 1.5rem;
+  text-align: left;
+}
+
+.promo-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #303033; // gris grafito
+  margin-bottom: 0.4rem;
+}
+
+.promo-price {
+  color: #1a73e8; // azul profesional
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.promo-text {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.6rem;
+}
+
+.promo-terms {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* ============ FOOTER ============ */
+
+footer {
+  background-color: @grafito;
+  color: @blanco;
+  text-align: center;
+  padding: 14px 10px;
+  font-size: 13px;
+  margin-top: 26px;
+}
+
+/* ============ RESPONSIVE GENERAL ============ */
+
+@media (max-width: 768px) {
+  header .header-container .logo {
+    font-size: 24px;
+  }
+
+  header .header-container nav a {
+    font-size: 11px;
+    padding: 5px 8px;
+    margin: 2px 3px;
+  }
+
+  .section-container {
+    padding: 18px 12px;
+  }
+}
+
+/* ================================
+   GALERÍA – NUESTRO LOCAL
+   ================================ */
+
+#galeria.galeria-section {
+  padding: 48px 0;
+
+  .section-title {
+    text-align: center;
+    color: @grafito;
+    font-size: 26px;
+    margin-bottom: 6px;
+  }
+
+  .section-subtitle {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 26px;
+    font-size: 0.95rem;
+    color: #555;
+  }
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
+}
+
+.galeria-item {
+  background-color: @blanco;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid @grisClaro;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 26px rgba(0,0,0,0.14);
+    border-color: @azul;
+  }
+}
+
+.galeria-thumb {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.galeria-caption {
+  padding: 12px 14px 16px;
+  text-align: left;
+
+  h3 {
+    font-size: 1rem;
+    color: @grafito;
+    margin-bottom: 4px;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #galeria.galeria-section {
+    padding: 36px 0;
+  }
+
+  .galeria-thumb {
+    height: 160px;
+  }
+}
+
+/* ================================
+   COTIZAR
+   ================================ */
+
+#cotizar.cotizar-section {
+  padding: 48px 0;
+
+  .section-title {
+    text-align: center;
+    color: @grafito;
+    font-size: 26px;
+    margin-bottom: 6px;
+  }
+
+  .section-subtitle {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 26px;
+    font-size: 0.95rem;
+    color: #555;
+  }
+}
+
+.cotizar-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+  gap: 28px;
+  align-items: flex-start;
+}
+
+/* Columna izquierda */
+.cotizar-info {
+  background-color: @grisClaro;
+  border-radius: 14px;
+  padding: 20px 22px;
+  text-align: left;
+
+  h3 {
+    color: @grafito;
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+}
+
+.cotizar-benefits {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+
+  li {
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 6px;
+  }
+}
+
+.cotizar-contact-hint {
+  font-size: 0.9rem;
+  color: #444;
+  background-color: lighten(@grisClaro, 4%);
+  border-radius: 10px;
+  padding: 10px 12px;
+
+  strong {
+    color: @grafito;
+  }
+}
+
+/* Columna formulario */
+.cotizar-form-card {
+  background-color: @blanco;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  padding: 22px 24px;
+  border: 1px solid @grisClaro;
+}
+
+#formulario-cotizar {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.form-field {
+  text-align: left;
+
+  label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: @grafito;
+    margin-bottom: 4px;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid @grisClaro;
+    padding: 9px 10px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border-color: @azul;
+    box-shadow: 0 0 0 2px fade(@azul, 15%);
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 110px;
+  }
+}
+
+/* Botón primario reutilizable */
+.btn-primary {
+  margin-top: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: none;
+  background-color: @azul;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: darken(@azul, 6%);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+  transform: translateY(-1px);
+}
+
+/* Responsive Cotizar */
+@media (max-width: 900px) {
+  .cotizar-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cotizar-form-card {
+    order: 1;
+  }
+
+  .cotizar-info {
+    order: 2;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========== ACERCA ========== */
+
+.acerca-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.acerca-section h2 {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.acerca-section p {
+  max-width: 800px;
+  margin: 0 auto 18px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Imagen de la sección Acerca (reducida y centrada) */
+.acerca-section .section-img {
+  max-width: 420px;    /* tamaño máximo de la foto */
+  width: 100%;         /* que se adapte en pantallas pequeñas */
+  height: auto;
+  display: block;
+  margin: 18px auto 24px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Opcional: cajas de valores/visión */
+.acerca-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.acerca-box {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 16px 18px;
+  text-align: left;
+  font-size: 14px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+/* ===========================
+   BLOG (blog.hbs)
+   =========================== */
+
+.blog {
+  padding: 60px 20px 50px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.blog h2 {
+  text-align: center;
+  font-size: 30px;
+  color: @grafito;
+  margin-bottom: 10px;
+}
+
+.blog > p {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 35px auto;
+  font-size: 15px;
+  color: #555;
+}
+
+/* contenedor de tarjetas del blog */
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* tarjeta individual */
+.blog-box {
+  background-color: @blanco;
+  border-radius: 18px;
+  padding: 18px 18px 22px 18px;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+  border: 1px solid fade(@azul, 10%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.blog-box img {
+  width: 100%;
+  border-radius: 14px;
+  display: block;
+}
+
+.blog-box h3 {
+  font-size: 18px;
+  color: @grafito;
+  margin: 4px 0;
+}
+
+.blog-box p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* responsive blog */
+@media (max-width: 900px) {
+  .blog-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===========================
+   CONTACTO (contacto.hbs)
+   =========================== */
+
+.contacto {
+  padding: 60px 20px 70px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: @grisClaro;
+  border-radius: 20px;
+}
+
+.contacto h2 {
+  font-size: 30px;
+  color: @grafito;
+  margin-bottom: 10px;
+}
+
+.contacto > p {
+  font-size: 15px;
+  color: #555;
+  max-width: 640px;
+  margin: 0 auto 26px auto;
+}
+
+/* formulario */
+#formulario-contacto {
+  background-color: @blanco;
+  padding: 24px 26px;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  text-align: left;
+}
+
+#formulario-contacto label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: @grafito;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+#formulario-contacto input,
+#formulario-contacto textarea {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #d0d4da;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: inherit;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#formulario-contacto input:focus,
+#formulario-contacto textarea:focus {
+  border-color: @azul;
+  box-shadow: 0 0 0 2px fade(@azul, 18%);
+}
+
+#formulario-contacto textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* botón enviar */
+#formulario-contacto button[type="submit"] {
+  margin-top: 18px;
+  display: inline-block;
+  border-radius: 22px;
+  border: none;
+  padding: 10px 26px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: @azul;
+  color: @blanco;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#formulario-contacto button[type="submit"]:hover {
+  background-color: darken(@azul, 6%);
+  transform: translateY(-1px);
+}
+
+#formulario-contacto button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* ===========================
+   FOOTER (footer.hbs)
+   =========================== */
+
+footer {
+  background-color: @grafito;
+  color: @blanco;
+  text-align: center;
+  padding: 16px 12px;
+  font-size: 13px;
+  margin-top: 40px;
+  border-top: 3px solid @azul;
+}
+
+footer a {
+  color: @turquesa;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
